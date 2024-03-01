@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, .2) 0px 2px 4px -1px, rgba (145, 158, 171, .14) 0px, 4px, 5px, -1px;
+  --font-family: 'Encode Sans', sans-serif;
+  --rating-color: #ffc908;
+}
+
+body {
+  font-family: var(--font-family) !important;
+  overflow-x: hidden;
+}
+
+.rating-color {
+  color: var(--rating-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.product:hover {
+  box-shadow: var(--shadow);
+  border: solid 1px var(--main-color);
+}
+
+.product .btn {
+  transition: transform 1s , opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+.parent{
+min-height: 100vh;
+display: grid;
+grid-template-rows: auto 1fr auto;
+}
+
+aside{
+  width: 100%;
+  background-color: var( --light-color);
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right:-100%;
+  z-index: 99999; 
+  overflow-y: auto;
+}
+span.cart{
+  width: 30px ;
+  height: 30px;
+  top:-10px;
+  left:25px;
+  background-color: var( --main-color);
+}
+/* .modal{
+  top: 30%;
+} */
+.loading{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 243, 242,.5);
+}
+
+.btn-brdr,.btn-brdr:hover{
+  border: 1px solid var(--light-color);
+}
+img{
+  object-fit: cover;
+}
+.main-color{
+  background-color: var( --light-color);
+}
+.categories{
+  border: 1px solid rgb(162, 162, 162);
+  transition: transform 1s , opacity 1s;
+
+
+}
+.items:hover .item{
+  opacity: 1;
+  transform: translateY(0);
+
+}
+
+.forget:hover{
+  cursor: pointer;
+  color:#0aad0a;
+}
